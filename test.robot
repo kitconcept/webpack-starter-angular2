@@ -1,14 +1,14 @@
 *** Variables ***
 
 ${HOSTNAME}             127.0.0.1
-${PORT}                 3000
+${PORT}                 8080
 ${SERVER}               http://${HOSTNAME}:${PORT}/
 ${BROWSER}              firefox
 
 
 *** Settings ***
 
-Documentation   Webpack Starter Angular Acceptance Tests
+Documentation   Webpack Starter Angular 2 Acceptance Tests
 Library         Process
 Library         DebugLibrary
 Library         Selenium2Library  timeout=10  implicit_wait=0
@@ -19,7 +19,7 @@ Suite Teardown  Test Teardown
 *** Keywords ***
 
 Test Setup
-  ${webpack-dev-server}=  Start Process  webpack-dev-server --bail --inline --port 3000 --content-base ${CURDIR}/dist   cwd=${CURDIR}  shell=true
+  ${webpack-dev-server}=  Start Process  webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8080  cwd=${CURDIR}  shell=true
   Set Suite Variable  ${WEBPACK-DEV-SERVER}  ${webpack-dev-server}
   Sleep  5s
   Open Browser  ${SERVER}  ${BROWSER}
@@ -35,5 +35,5 @@ Test Teardown
 
 Front Page
   Go To  ${SERVER}
-  Wait until page contains  Hello World
-  Page Should Contain  Hello World
+  Wait until page contains  Webpack Starter Angular 2
+  Page Should Contain  Webpack Starter Angular 2

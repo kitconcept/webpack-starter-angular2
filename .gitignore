@@ -1,0 +1,10 @@
+dist/
+node_modules/
+bin/
+include/
+lib/
+local/
+log.html
+output.xml
+report.html
+selenium/

@@ -1,0 +1,27 @@
+{
+  "name": "webpack-starter-angular2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test:acceptance": "pybot test.robot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitconcept/webpack-starter-angular2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kitconcept/webpack-starter-angular2/issues"
+  },
+  "homepage": "https://github.com/kitconcept/webpack-starter-angular2",
+  "dependencies": {},
+  "devDependencies": {
+    "html-webpack-plugin": "^2.19.0",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1"
+  }
+}

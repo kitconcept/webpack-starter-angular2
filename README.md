@@ -15,3 +15,8 @@ src/main.js::
 webpack.config.js::
 
   ...
+
+
+"start": "webpack-dev-server --inline",
+
+-> runs webpack-dev-server inline with auto-reload.

@@ -9,4 +9,5 @@ output.xml
 report.html
 selenium/
 typings/
+npm-debug.log
 selenium-screenshot-*.png

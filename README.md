@@ -9,3 +9,10 @@ Install webpack:
   $ npm install -g webpack
   $ npm init -y
   $ npm install webpack webpack-dev-server --save-dev
+
+
+## Tools
+
+### Sublime Text 3
+
+https://github.com/Microsoft/TypeScript-Sublime-Plugin

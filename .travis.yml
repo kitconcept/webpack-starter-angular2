@@ -13,7 +13,6 @@ install:
 - npm install -g webpack
 - npm install -g webpack-dev-server
 - npm install typings
-- typings install
 - npm install
 script:
 - npm run test:acceptance

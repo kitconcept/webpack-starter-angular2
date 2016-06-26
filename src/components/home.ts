@@ -8,7 +8,6 @@ import {Component} from '@angular/core';
   `,
 })
 export class Home {
-
   constructor(){
     console.log("In Home constructor");
   }

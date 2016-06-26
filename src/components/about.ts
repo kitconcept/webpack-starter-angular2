@@ -7,4 +7,8 @@ import {Component} from '@angular/core';
     <p>This is the about component which can be found in src/components/about.ts</p>
   `,
 })
-export class About {}
+export class About {
+  constructor(){
+    console.log("In About constructor");
+  }
+}

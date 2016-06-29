@@ -33,7 +33,14 @@ Test Teardown
 
 *** Test Cases ***
 
-Front Page
+Scenario: As a visitor I can visit the front page
   Go To  ${SERVER}
   Wait until page contains  Webpack Starter Angular 2
   Page Should Contain  Webpack Starter Angular 2
+
+Scenario: As a visitor I can navigate to the about page
+  Go To  ${SERVER}
+  Wait until page contains  Webpack Starter Angular 2
+  Click Link  About
+  Wait until page contains  About Component
+  Location should be  http://127.0.0.1:8080/about

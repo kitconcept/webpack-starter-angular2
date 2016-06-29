@@ -13,6 +13,7 @@ install:
 - sudo pip install -r requirements.txt
 - npm install -g webpack
 - npm install -g webpack-dev-server
+- npm install -g tslint
 - npm install
 script:
 - npm run lint

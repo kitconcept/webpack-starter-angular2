@@ -11,10 +11,20 @@ module.exports = {
     extensions: ['', '.ts', '.js']
   },
   module: {
+    preLoaders: [
+      {
+        test: /\.ts$/,
+        loader: 'tslint'
+      }
+    ],
     loaders: [
       {test: /.ts$/, loader: 'ts', query: {compilerOptions: {noEmit: false}}}
     ],
     noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
+  },
+  tslint: {
+    emitErrors: true,
+    failOnHint: true
   },
   devServer: {
     contentBase: 'src',

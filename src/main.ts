@@ -6,11 +6,10 @@ import '@angular/router';
 
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {HTTP_PROVIDERS} from '@angular/http';
-import {ROUTER_PROVIDERS} from '@angular/router';
-
+import {APP_ROUTER_PROVIDERS} from './app.routes';
 import {MyApp} from './components/app';
 
 bootstrap(MyApp, [
   ...HTTP_PROVIDERS,
-  ...ROUTER_PROVIDERS
+  ...APP_ROUTER_PROVIDERS
 ]).catch((console) => console.error(console));

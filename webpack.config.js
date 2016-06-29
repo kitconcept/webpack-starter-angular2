@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   entry: "./src/main",
@@ -16,6 +17,11 @@ module.exports = {
     ],
     noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
   },
+  plugins: [
+    new CopyWebpackPlugin([
+      { from: 'mockbackend/people.json' },
+    ])
+  ],
   devServer: {
     contentBase: 'src',
     historyApiFallback: true

@@ -3,6 +3,7 @@ import { Routes, ROUTER_DIRECTIVES} from '@angular/router';
 
 import {Home} from './home';
 import {About} from './about';
+import {Backend} from './backend';
 
 @Component({
   selector: 'my-app',
@@ -12,6 +13,7 @@ import {About} from './about';
     <div>
       <a [routerLink]="['/']">Home</a>
       <a [routerLink]="['/about']">About</a>
+      <a [routerLink]="['/backend']">Backend</a>
     </div>
     <div>
       <router-outlet></router-outlet>
@@ -20,6 +22,7 @@ import {About} from './about';
 })
 @Routes([
   { path: '/',      component: Home},
-  { path: '/about', component: About}
+  { path: '/about', component: About},
+  { path: '/backend', component: Backend}
 ])
 export class MyApp {}

@@ -2,6 +2,8 @@
 
 # Webpack Starter Angular 2
 
+Minimalistic seed project to get started with Angular 2, TypeScript and Webpack.
+
 ## Prerequisits
 
 Install webpack:

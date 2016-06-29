@@ -1,7 +1,7 @@
 {
   "name": "webpack-starter-angular2",
   "version": "1.0.0",
-  "description": "",
+  "description": "Minimalistic seed project to get started with Angular 2, TypeScript and Webpack.",
   "private": true,
   "scripts": {
     "postinstall": "typings install",

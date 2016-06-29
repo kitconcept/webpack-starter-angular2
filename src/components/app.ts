@@ -10,8 +10,8 @@ import {About} from "./about";
   template: `
     <h1>Webpack Starter Angular 2</h1>
     <div>
-      <a [routerLink]="["/"]">Home</a>
-      <a [routerLink]="["/about"]">About</a>
+      <a [routerLink]="['/']">Home</a>
+      <a [routerLink]="['/about']">About</a>
     </div>
     <div>
       <router-outlet></router-outlet>

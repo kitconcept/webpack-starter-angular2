@@ -35,8 +35,8 @@ Test Teardown
 
 Scenario: As a visitor I can visit the front page
   Go To  ${SERVER}
-  Wait until page contains  Webpack Starter Angular 2
-  Page Should Contain  Webpack Starter Angular 2
+  Wait until page contains  Home Component
+  Page Should Contain  Home Component
 
 Scenario: As a visitor I can navigate to the about page
   Go To  ${SERVER}

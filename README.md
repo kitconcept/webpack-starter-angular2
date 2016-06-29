@@ -8,22 +8,22 @@ Minimalistic seed project to get started with Angular 2, TypeScript and Webpack.
 
 Install webpack:
 
-  $ npm install -g webpack
+    $ npm install -g webpack
 
 ## Usage
 
 Checkout repository:
 
-  $ git clone https://github.com/kitconcept/webpack-starter-angular2.git
-  $ cd webpack-starter-angular2
+    $ git clone https://github.com/kitconcept/webpack-starter-angular2.git
+    $ cd webpack-starter-angular2
 
 Install dependencies:
 
-  $ npm install
+    $ npm install
 
 Start development server:
 
-  $ npm start
+    $ npm start
 
 ## Tools
 

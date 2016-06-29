@@ -7,9 +7,21 @@
 Install webpack:
 
   $ npm install -g webpack
-  $ npm init -y
-  $ npm install webpack webpack-dev-server --save-dev
 
+## Usage
+
+Checkout repository:
+
+  $ git clone https://github.com/kitconcept/webpack-starter-angular2.git
+  $ cd webpack-starter-angular2
+
+Install dependencies:
+
+  $ npm install
+
+Start development server:
+
+  $ npm start
 
 ## Tools
 

@@ -8,6 +8,8 @@
     "build": "webpack -p --bail",
     "start": "webpack-dev-server --bail --inline --colors --progress --display-error-details --display-cached --port 8080",
     "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
+    "lint": "npm run tslint \"src/**/*.ts\"",
+    "tslint": "tslint",
     "test:acceptance": "pybot test.robot"
   },
   "repository": {

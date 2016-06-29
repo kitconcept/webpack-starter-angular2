@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "postinstall": "typings install",
-    "build": "webpack -p",
-    "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8080",
+    "build": "webpack -p --bail",
+    "start": "webpack-dev-server --bail --inline --colors --progress --display-error-details --display-cached --port 8080",
     "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
     "test:acceptance": "pybot test.robot"
   },

@@ -30,3 +30,8 @@ Start development server:
 ### Sublime Text 3
 
 https://github.com/Microsoft/TypeScript-Sublime-Plugin
+
+### Resources
+
+- Code samples from the book Angular 2 Development with TypeScript: https://github.com/Farata/angular2typescript
+- AngularClass starter kit: https://github.com/AngularClass/angular2-webpack-starter

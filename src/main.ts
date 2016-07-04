@@ -3,6 +3,8 @@ import 'reflect-metadata/Reflect.js';
 import '@angular/platform-browser-dynamic';
 import '@angular/http';
 import '@angular/router';
+import './scss/main.scss';
+import 'theme';
 
 import {bootstrap} from '@angular/platform-browser-dynamic';
 import {HTTP_PROVIDERS} from '@angular/http';

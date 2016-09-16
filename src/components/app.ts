@@ -1,12 +1,10 @@
-import {Component} from '@angular/core';
-import {ROUTER_DIRECTIVES} from '@angular/router';
+import { Component } from '@angular/core';
 
-import {Home} from './home';
-import {About} from './about';
+import { Home } from './home';
+import { About } from './about';
 
 @Component({
   selector: 'my-app',
-  directives: [ROUTER_DIRECTIVES],
   template: `
     <h1>Webpack Starter Angular 2</h1>
     <div>

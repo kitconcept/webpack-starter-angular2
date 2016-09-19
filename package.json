@@ -8,7 +8,7 @@
     "build": "webpack -p",
     "start": "webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8080",
     "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
-    "lint": "npm run tslint \"src/**/*.ts\"",
+    "lint": "node_modules/tslint/bin/tslint \"src/**/*.ts\"",
     "test:acceptance": "pybot test.robot",
     "tslint": "tslint",
     "typings": "typings"

@@ -1,15 +1,11 @@
 import 'zone.js/dist/zone';
 import 'reflect-metadata/Reflect.js';
-import '@angular/platform-browser-dynamic';
 import '@angular/http';
 import '@angular/router';
 
-import {bootstrap} from '@angular/platform-browser-dynamic';
-import {HTTP_PROVIDERS} from '@angular/http';
-import {APP_ROUTER_PROVIDERS} from './app.routes';
-import {MyApp} from './components/app';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+import { environment } from './environments/environment';
+import { AppModule } from './app.module';
 
-bootstrap(MyApp, [
-  ...HTTP_PROVIDERS,
-  ...APP_ROUTER_PROVIDERS
-]).catch((console) => console.error(console));
+platformBrowserDynamic().bootstrapModule(AppModule);

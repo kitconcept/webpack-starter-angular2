@@ -45,6 +45,8 @@ package.json:
   "test": "karma start karma.conf.js"
 
 
+More details: https://github.com/Farata/angular2typescript/tree/master/chapter10/angular2-webpack-starter
+
 ## Linting
 
 Install tslint and tslint-loader:

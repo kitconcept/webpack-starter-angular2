@@ -22,17 +22,20 @@ Install webpack:
 
 Checkout repository:
 
-    $ git clone https://github.com/kitconcept/webpack-starter-angular2.git
-    $ cd webpack-starter-angular2
+  $ git clone https://github.com/kitconcept/webpack-starter-angular2.git
+  $ cd webpack-starter-angular2
 
 Install dependencies:
 
-    $ npm install
+  $ npm install
 
 Start development server:
 
-    $ npm start
+  $ npm start
 
+Run unit tests:
+
+  $ npm test
 
 ## Testing
 

@@ -4,6 +4,14 @@
 
 Minimalistic seed project to get started with Angular 2, TypeScript and Webpack.
 
+## Software Stack
+
+- Angular 2 (final)
+- Webpack 2
+- TypeScript
+- TsLint
+- Karma, Mocha
+
 ## Prerequisits
 
 Install webpack:

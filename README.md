@@ -38,7 +38,7 @@ Start development server:
 
 Install Dependencies:
 
-  $ npm install karma karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-mocha-reporter karma-webpack jasmine-core --save-dev
+  $ npm install karma karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-mocha-reporter karma-webpack jasmine-core @types/es6-shim @types/jasmine --save-dev
 
 package.json:
 

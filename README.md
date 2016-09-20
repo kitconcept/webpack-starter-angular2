@@ -34,6 +34,19 @@ Start development server:
     $ npm start
 
 
+## Testing
+
+Install Dependencies:
+
+  $ npm install karma karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-mocha-reporter karma-webpack jasmine-core @types/es6-shim @types/jasmine --save-dev
+
+package.json:
+
+  "test": "karma start karma.conf.js"
+
+
+More details: https://github.com/Farata/angular2typescript/tree/master/chapter10/angular2-webpack-starter
+
 ## Linting
 
 Install tslint and tslint-loader:

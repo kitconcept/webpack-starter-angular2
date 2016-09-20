@@ -19,7 +19,7 @@ Suite Teardown  Test Teardown
 *** Keywords ***
 
 Test Setup
-  ${webpack-dev-server}=  Start Process  webpack-dev-server --inline --colors --progress --display-error-details --display-cached --port 8080  cwd=${CURDIR}  shell=true
+  ${webpack-dev-server}=  Start Process  webpack-dev-server --port 8080  cwd=${CURDIR}  shell=true
   Set Suite Variable  ${WEBPACK-DEV-SERVER}  ${webpack-dev-server}
   Sleep  5s
   Open Browser  ${SERVER}  ${BROWSER}

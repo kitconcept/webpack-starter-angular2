@@ -2,9 +2,18 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: "./src/main",
+  debug: true,
+  devServer: {
+    contentBase: 'src',
+    historyApiFallback: true,
+    host: 'localhost',
+    port: 3000
+  },
+  entry: {
+    'main'  : './src/main.ts'
+  },
   output: {
-    path: './dist',
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js'
   },
   resolve: {

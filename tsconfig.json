@@ -5,7 +5,9 @@
     "experimentalDecorators": true,
     "module": "commonjs",
     "sourceMap": true,
-    "target": "es5"
+    "noEmit": true,
+    "target": "es5",
+    "types": ["es6-shim", "jasmine"]
   },
   "exclude": [
     "node_modules",

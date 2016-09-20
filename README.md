@@ -26,6 +26,17 @@ Start development server:
     $ npm start
 
 
+## Testing
+
+Install Dependencies:
+
+  $ npm install karma karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-mocha-reporter karma-webpack jasmine-core --save-dev
+
+package.json:
+
+  "test": "karma start karma.conf.js"
+
+
 ## Linting
 
 Install tslint and tslint-loader:

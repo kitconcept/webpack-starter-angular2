@@ -50,6 +50,16 @@ package.json:
 
 More details: https://github.com/Farata/angular2typescript/tree/master/chapter10/angular2-webpack-starter
 
+### Jenkins
+
+Install karma-junit-reporter:
+
+  $ npm install karma-junit-reporter --save-dev
+
+Add junit to report in karma.conf.js:
+
+  reporters: ['mocha', 'junit'],
+
 ## Linting
 
 Install tslint and tslint-loader:

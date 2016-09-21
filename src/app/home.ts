@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "my-home",
@@ -7,7 +7,7 @@ import {Component} from "@angular/core";
     <p>This is the home component which can be found in src/app/home.ts</p>
   `,
 })
-export class Home {
+export class HomeComponent {
   constructor() {
     console.log("In Home constructor");
   }

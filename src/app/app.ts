@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
-import { Home } from "./home";
-import { About } from "./about";
+import { HomeComponent } from "./home";
+import { AboutComponent } from "./about";
 
 @Component({
   selector: "my-app",
@@ -16,4 +16,4 @@ import { About } from "./about";
     </div>
   `
 })
-export class MyApp {}
+export class AppComponent {}

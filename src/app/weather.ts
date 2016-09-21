@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
   selector: "weather",
@@ -7,7 +7,7 @@ import {Component} from "@angular/core";
     <p>This is the wheater component which can be found in src/app/wheater.ts</p>
   `,
 })
-export class Weather {
+export class WeatherComponent {
   constructor() {
     console.log("In Wheater constructor");
   }

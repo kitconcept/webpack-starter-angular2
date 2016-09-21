@@ -60,6 +60,10 @@ Add junit to report in karma.conf.js:
 
   reporters: ['mocha', 'junit'],
 
+## Test Coverage
+
+  $ npm install karma-coverage karma-sourcemap-loader --save-dev
+
 ## Linting
 
 Install tslint and tslint-loader:

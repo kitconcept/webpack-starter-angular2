@@ -28,8 +28,12 @@ module.exports = {
         }
     ],
     loaders: [
-      {test: /.ts$/, loader: 'ts', query: {compilerOptions: {noEmit: false}}}
-    ],
+      {test: /.ts$/, loader: 'ts', query: {compilerOptions: {noEmit: false}}},
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
+      }
+    ],    
     noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
   },
   // more options in the optional tslint object

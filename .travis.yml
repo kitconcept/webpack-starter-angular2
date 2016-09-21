@@ -23,7 +23,7 @@ install:
 - npm install -g webpack-dev-server
 - npm install
 script:
-- npm run lint
+- npm run lint:travis
 - npm test
 - npm run test:acceptance
 notifications:

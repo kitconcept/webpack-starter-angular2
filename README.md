@@ -62,7 +62,22 @@ Add junit to report in karma.conf.js:
 
 ## Test Coverage
 
+Install dependencies:
+
   $ npm install karma-coverage karma-sourcemap-loader --save-dev
+
+Karma configuration (karma.conf.js):
+
+  reporters    : ['mocha', 'junit', 'coverage'],
+  preprocessors: {'./karma-test-runner.js': ['webpack', 'coverage', 'sourcema
+  coverageReporter: {
+    dir : 'coverage/',
+    reporters: [
+      { type: 'text-summary' },
+      { type: 'json' },
+      { type: 'html' }
+    ]
+  },
 
 ## Linting
 

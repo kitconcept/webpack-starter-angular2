@@ -4,7 +4,7 @@ import {Component} from "@angular/core";
   selector: "weather",
   template: `
     <h2>Weather Component</h2>
-    <p>This is the wheater component which can be found in src/components/wheater.ts</p>
+    <p>This is the wheater component which can be found in src/app/wheater.ts</p>
   `,
 })
 export class Weather {

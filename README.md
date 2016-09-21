@@ -69,7 +69,7 @@ Install dependencies:
 Karma configuration (karma.conf.js):
 
   reporters    : ['mocha', 'junit', 'coverage'],
-  preprocessors: {'./karma-test-runner.js': ['webpack', 'coverage', 'sourcema
+  preprocessors: {'./karma-test-runner.js': ['webpack', 'coverage', 'sourcemap']},
   coverageReporter: {
     dir : 'coverage/',
     reporters: [

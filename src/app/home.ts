@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "sg-home",
+  selector: "kc-home",
   template: `
     <h2>Home Component</h2>
     <p>This is the home component which can be found in src/app/home.ts</p>

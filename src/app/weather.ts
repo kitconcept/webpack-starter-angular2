@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 
 @Component({
-  selector: "sg-weather",
+  selector: "kc-weather",
   template: `
     <h2>Weather Component</h2>
     <p>This is the wheater component which can be found in src/app/wheater.ts</p>

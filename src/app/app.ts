@@ -4,7 +4,7 @@ import { HomeComponent } from "./home";
 import { AboutComponent } from "./about";
 
 @Component({
-  selector: "my-app",
+  selector: "sg-app",
   template: `
     <h1>Webpack Starter Angular 2</h1>
     <div>

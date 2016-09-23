@@ -8,7 +8,9 @@
     "build": "webpack -p",
     "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8080",
     "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
-    "lint": "node_modules/tslint/bin/tslint \"src/**/*.ts\"",
+    "lint": "node_modules/tslint/bin/tslint \"src/**/*.ts\" || true",
+    "lint:ci": "node_modules/tslint/bin/tslint -o tslint.xml -t pmd src/**/*.ts || true",
+    "lint:travis": "node_modules/tslint/bin/tslint \"src/**/*.ts\"",
     "test": "node_modules/karma/bin/karma start karma.conf.js",
     "test:acceptance": "pybot test.robot",
     "typings": "typings"
@@ -45,6 +47,7 @@
   "devDependencies": {
     "@types/es6-shim": "0.0.31",
     "@types/jasmine": "2.2.34",
+    "codelyzer": "0.0.28",
     "html-webpack-plugin": "2.22.0",
     "jasmine-core": "2.5.2",
     "json-loader": "0.5.4",

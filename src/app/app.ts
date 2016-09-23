@@ -1,10 +1,10 @@
 import { Component } from "@angular/core";
 
-import { Home } from "./home";
-import { About } from "./about";
+import { HomeComponent } from "./home";
+import { AboutComponent } from "./about";
 
 @Component({
-  selector: "my-app",
+  selector: "kc-app",
   template: `
     <h1>Webpack Starter Angular 2</h1>
     <div>
@@ -16,4 +16,4 @@ import { About } from "./about";
     </div>
   `
 })
-export class MyApp {}
+export class AppComponent {}

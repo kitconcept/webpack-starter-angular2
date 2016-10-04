@@ -22,30 +22,30 @@ Install webpack:
 
 Checkout repository:
 
-  $ git clone https://github.com/kitconcept/webpack-starter-angular2.git
-  $ cd webpack-starter-angular2
+    $ git clone https://github.com/kitconcept/webpack-starter-angular2.git
+    $ cd webpack-starter-angular2
 
 Install dependencies:
 
-  $ npm install
+    $ npm install
 
 Start development server:
 
-  $ npm start
+    $ npm start
 
 Run unit tests:
 
-  $ npm test
+    $ npm test
 
 ## Testing
 
 Install Dependencies:
 
-  $ npm install karma karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-mocha-reporter karma-webpack jasmine-core @types/es6-shim @types/jasmine --save-dev
+    $ npm install karma karma-chrome-launcher karma-firefox-launcher karma-jasmine karma-mocha-reporter karma-webpack jasmine-core @types/es6-shim @types/jasmine --save-dev
 
 package.json:
 
-  "test": "karma start karma.conf.js"
+    "test": "karma start karma.conf.js"
 
 
 More details: https://github.com/Farata/angular2typescript/tree/master/chapter10/angular2-webpack-starter
@@ -54,40 +54,40 @@ More details: https://github.com/Farata/angular2typescript/tree/master/chapter10
 
 Install karma-junit-reporter:
 
-  $ npm install karma-junit-reporter --save-dev
+    $ npm install karma-junit-reporter --save-dev
 
 Add junit to report in karma.conf.js:
 
-  reporters: ['mocha', 'junit'],
+    reporters: ['mocha', 'junit'],
 
 ## Test Coverage
 
 Install dependencies:
 
-  $ npm install karma-coverage karma-sourcemap-loader --save-dev
+    $ npm install karma-coverage karma-sourcemap-loader --save-dev
 
 Karma configuration (karma.conf.js):
 
-  reporters    : ['mocha', 'junit', 'coverage'],
-  preprocessors: {'./karma-test-runner.js': ['webpack', 'coverage', 'sourcemap']},
-  coverageReporter: {
-    dir : 'coverage/',
-    reporters: [
-      { type: 'text-summary' },
-      { type: 'json' },
-      { type: 'html' }
-    ]
-  },
+    reporters    : ['mocha', 'junit', 'coverage'],
+    preprocessors: {'./karma-test-runner.js': ['webpack', 'coverage', 'sourcemap']},
+    coverageReporter: {
+      dir : 'coverage/',
+      reporters: [
+        { type: 'text-summary' },
+        { type: 'json' },
+        { type: 'html' }
+      ]
+    },
 
 ## Linting
 
 Install tslint and tslint-loader:
 
-  $ npm install tslint tslint-loader --save-dev
+    $ npm install tslint tslint-loader --save-dev
 
 Create initial configuration file:
 
-  $ node_modules/tslint/bin/tslint init
+    $ node_modules/tslint/bin/tslint init
 
 Configure tslint-loader (webpack.config.js):
 
@@ -136,13 +136,13 @@ Configure tslint-loader (webpack.config.js):
     },
 Install pre-commit hook:
 
-  $ npm install --save-dev pre-commit
+    $ npm install --save-dev pre-commit
 
 Configure pre-commit hook (package.json):
 
-  "pre-commit": [
-    "lint"
-  ],
+    "pre-commit": [
+      "lint"
+    ],
 
 ## Tools
 

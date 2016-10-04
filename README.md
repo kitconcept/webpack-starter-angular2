@@ -144,6 +144,15 @@ Configure pre-commit hook (package.json):
     "lint"
   ],
 
+
+## Code Guidelines
+
+Enforce following the Angular 2 code guidelines with codelyzer.
+
+Install codelyzer:
+
+  $ npm install --save-dev codelyzer
+
 ## Tools
 
 ### Sublime Text 3

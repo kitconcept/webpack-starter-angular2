@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   debug: true,
@@ -33,7 +34,7 @@ module.exports = {
         test: /\.json$/,
         loader: 'json-loader'
       }
-    ],    
+    ],
     noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
   },
   // more options in the optional tslint object
@@ -75,6 +76,18 @@ module.exports = {
     }
   },
   plugins: [
+    /*
+     * Plugin: HtmlWebpackPlugin
+     * Description: Simplifies creation of HTML files to serve your webpack bundles.
+     * This is especially useful for webpack bundles that include a hash in the filename
+     * which changes every compilation.
+     *
+     * See: https://github.com/ampedandwired/html-webpack-plugin
+     */
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      chunksSortMode: 'dependency'
+    }),
     /**
      * Plugin: ContextReplacementPlugin
      * Description: Provides context to Angular's use of System.import

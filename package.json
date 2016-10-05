@@ -59,7 +59,7 @@
   },
   "scripts": {
     "postinstall": "typings install",
-    "build": "webpack -p",
+    "build": "NODE_ENV=production webpack -p",
     "start": "node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8080",
     "clean": "npm cache clean && rimraf -- node_modules doc typings coverage dist",
     "lint": "node_modules/tslint/bin/tslint \"src/**/*.ts\" || true",

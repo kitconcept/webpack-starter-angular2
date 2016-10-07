@@ -4,6 +4,7 @@ import { routing } from "./app.routes";
 import { AppComponent } from "./app/app";
 import { HomeComponent } from "./app/home";
 import { AboutComponent } from "./app/about";
+import { BackendComponent } from "./app/backend";
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { AboutComponent } from "./app/about";
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    BackendComponent
   ],
   bootstrap: [ AppComponent ]
 })

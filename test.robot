@@ -1,7 +1,7 @@
 *** Variables ***
 
 ${HOSTNAME}             127.0.0.1
-${PORT}                 8080
+${PORT}                 3000
 ${SERVER}               http://${HOSTNAME}:${PORT}/
 ${BROWSER}              firefox
 
@@ -19,7 +19,7 @@ Suite Teardown  Test Teardown
 *** Keywords ***
 
 Test Setup
-  ${webpack-dev-server}=  Start Process  webpack-dev-server --port 8080  cwd=${CURDIR}  shell=true
+  ${webpack-dev-server}=  Start Process  webpack-dev-server --port 3000  cwd=${CURDIR}  shell=true
   Set Suite Variable  ${WEBPACK-DEV-SERVER}  ${webpack-dev-server}
   Sleep  5s
   Open Browser  ${SERVER}  ${BROWSER}
@@ -43,4 +43,4 @@ Scenario: As a visitor I can navigate to the about page
   Wait until page contains  Webpack Starter Angular 2
   Click Link  About
   Wait until page contains  About Component
-  Location should be  http://127.0.0.1:8080/about
+  Location should be  http://127.0.0.1:3000/about

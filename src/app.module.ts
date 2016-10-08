@@ -1,5 +1,6 @@
 import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
+import { HttpModule } from "@angular/http";
 import { routing } from "./app.routes";
 import { AppComponent } from "./app/app";
 import { HomeComponent } from "./app/home";
@@ -9,6 +10,7 @@ import { BackendComponent } from "./app/backend";
 @NgModule({
   imports: [
     BrowserModule,
+    HttpModule,
     routing
   ],
   declarations: [

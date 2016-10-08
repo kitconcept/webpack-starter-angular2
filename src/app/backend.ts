@@ -6,27 +6,29 @@ import { Page } from "./page";
 @Component({
   selector: "kc-backend",
   template: `
-    <h2>Backend Component</h2>
+    <h2>{{pageTitle}}</h2>
     <p>This is the backend component which can be found in src/app/backend.ts</p>
-    <ul class="pages">
-      <li *ngFor="let page of pages">
-        {{page.id}}: {{page.title}}
-      </li>
-    </ul>
+    <p>{{pageId}}</p>
   `,
   providers: [BackendService]
 })
 export class BackendComponent implements OnInit {
-  pages: Page[];
 
-  constructor(private backendService: BackendService) { }
+  pageId: string;
+  pageTitle: string;
+  // pageText: string;
 
-  getPages(): void {
-    this.backendService.getBackend().then(pages => this.pages = pages);
+  constructor(private backendService: BackendService) {}
+
+  ngOnInit() {
+    this.backendService.getPage("front-page").subscribe(
+      data => {
+        this.pageTitle = data.title;
+        this.pageId = data.id;
+       },
+      err => console.log("Can't get page. Error code: %s, URL: %s ",
+                err.status, err.url),
+      () => console.log("Done")
+    );
   }
-
-  ngOnInit(): void {
-    this.getPages();
-  }
-
 }

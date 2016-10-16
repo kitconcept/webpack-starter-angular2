@@ -22,4 +22,13 @@ export class BackendService {
     ).map(response => response.json());
   }
 
+  getNavbar(): Observable<any> {
+    let headers = new Headers({ "Accept": "application/json" });
+    let options = new RequestOptions({ headers: headers });
+    return this.http.get(
+      "http://localhost:8080/Plone/@components/navigation",
+      options
+    ).map(response => response.json());
+  }
+
 }

@@ -9,6 +9,7 @@ import { Page } from "./page";
     <h2>{{pageTitle}}</h2>
     <p>This is the backend component which can be found in src/app/backend.ts</p>
     <p>{{pageId}}</p>
+    <div [innerHTML]="pageText"></div>
   `,
   providers: [BackendService]
 })
@@ -16,7 +17,7 @@ export class BackendComponent implements OnInit {
 
   pageId: string;
   pageTitle: string;
-  // pageText: string;
+  pageText: string;
 
   constructor(private backendService: BackendService) {}
 
@@ -25,6 +26,7 @@ export class BackendComponent implements OnInit {
       data => {
         this.pageTitle = data.title;
         this.pageId = data.id;
+        this.pageText = data.text.data;
        },
       err => console.log("Can't get page. Error code: %s, URL: %s ",
                 err.status, err.url),

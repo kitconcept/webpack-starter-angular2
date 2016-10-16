@@ -3,16 +3,13 @@ import { Component } from "@angular/core";
 import { HomeComponent } from "./home";
 import { AboutComponent } from "./about";
 import { BackendComponent } from "./backend";
+import { NavbarComponent } from "./navbar";
 
 @Component({
   selector: "kc-app",
   template: `
     <h1>Webpack Starter Angular 2</h1>
-    <div>
-      <a [routerLink]="['/']">Home</a>
-      <a [routerLink]="['/about']">About</a>
-      <a [routerLink]="['/backend']">Backend</a>
-    </div>
+    <plone-navbar></plone-navbar>
     <div>
       <router-outlet></router-outlet>
     </div>

@@ -8,7 +8,6 @@ import { NavbarComponent } from "./navbar";
 @Component({
   selector: "kc-app",
   template: `
-    <h1>Webpack Starter Angular 2</h1>
     <plone-navbar></plone-navbar>
     <div>
       <router-outlet></router-outlet>

@@ -7,6 +7,7 @@ import { HomeComponent } from "./app/home";
 import { AboutComponent } from "./app/about";
 import { BackendComponent } from "./app/backend";
 import { NavbarComponent }  from "./app/navbar";
+import "material-design-lite/material.css";
 
 @NgModule({
   imports: [

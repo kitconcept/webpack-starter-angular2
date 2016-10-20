@@ -1,19 +1,19 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { BackendService } from "./backend.service";
+import { PageService } from "./page.service";
 import { Page } from "./page";
 import { Location } from "@angular/common";
 
 @Component({
-  selector: "plone-backend",
+  selector: "plone-page",
   template: `
     <h2>{{pageTitle}}</h2>
     <b>{{pageDescription}}</b>
     <div [innerHTML]="pageText"></div>
   `,
-  providers: [BackendService]
+  providers: [PageService]
 })
-export class BackendComponent implements OnInit {
+export class PageComponent implements OnInit {
 
   sub: any;
   activePath: string;
@@ -22,7 +22,7 @@ export class BackendComponent implements OnInit {
   pageDescription: string;
   pageText: string;
 
-  constructor(private location: Location, private route: ActivatedRoute, private backendService: BackendService) {
+  constructor(private location: Location, private route: ActivatedRoute, private pageService: PageService) {
     console.log(this.location.path());
   }
 
@@ -30,7 +30,7 @@ export class BackendComponent implements OnInit {
     this.sub = this.route.params.subscribe(params => {
       this.activePath = params["path"];
       console.log("activePath: " + this.activePath);
-      this.backendService.getPage(this.activePath).subscribe(
+      this.pageService.getPage(this.activePath).subscribe(
         data => {
           this.pageTitle = data.title;
           this.pageId = data.id;

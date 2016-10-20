@@ -3,12 +3,12 @@ import { Routes, RouterModule } from "@angular/router";
 
 import { HomeComponent } from "./app/home";
 import { AboutComponent } from "./app/about";
-import { BackendComponent } from "./app/backend";
+import { PageComponent } from "./app/page.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent},
   { path: "about", component: AboutComponent},
-  { path: ":path", component: BackendComponent}
+  { path: ":path", component: PageComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

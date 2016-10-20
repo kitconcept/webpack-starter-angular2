@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { BackendService } from "./backend.service";
+import { PageService } from "./page.service";
 
 @Component({
   selector: "plone-navbar",
@@ -37,16 +37,16 @@ import { BackendService } from "./backend.service";
       </main>
     </div>
   `,
-  providers: [BackendService]
+  providers: [PageService]
 })
 export class NavbarComponent implements OnInit {
 
   navbarItems: Array<string>;
 
-  constructor(private backendService: BackendService) {}
+  constructor(private pageService: PageService) {}
 
   ngOnInit() {
-    this.backendService.getNavbar().subscribe(
+    this.pageService.getNavbar().subscribe(
       data => {
         console.log(data);
         this.navbarItems = data[0].items;

@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 import { HomeComponent } from "./home";
 import { AboutComponent } from "./about";
-import { BackendComponent } from "./backend";
+import { PageComponent } from "./page.component";
 import { NavbarComponent } from "./navbar";
 import "./styles.scss";
 

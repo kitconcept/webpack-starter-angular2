@@ -1,14 +1,13 @@
 import { Injectable } from "@angular/core";
 import { Http, Headers, RequestOptions } from "@angular/http";
-import { BackendComponent } from "./backend";
+import { PageComponent } from "./page.component";
 import { Page } from "./page";
-import { PAGES } from "./mock-pages";
 import { Observable } from "rxjs/Observable";
 import "rxjs/add/operator/map";
 
 
 @Injectable()
-export class BackendService {
+export class PageService {
 
   constructor(private http: Http) {}
 

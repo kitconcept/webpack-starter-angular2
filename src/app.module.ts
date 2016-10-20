@@ -5,7 +5,7 @@ import { routing } from "./app.routes";
 import { AppComponent } from "./app/app";
 import { HomeComponent } from "./app/home";
 import { AboutComponent } from "./app/about";
-import { BackendComponent } from "./app/backend";
+import { PageComponent } from "./app/page.component";
 import { NavbarComponent }  from "./app/navbar";
 import "material-design-lite/material.css";
 import "material-design-lite/material.js";
@@ -20,7 +20,7 @@ import "material-design-lite/material.js";
     AppComponent,
     HomeComponent,
     AboutComponent,
-    BackendComponent,
+    PageComponent,
     NavbarComponent
   ],
   bootstrap: [ AppComponent ]

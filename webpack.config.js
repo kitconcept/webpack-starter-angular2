@@ -31,6 +31,7 @@ module.exports = {
     loaders: [
       {test: /.ts$/, loader: 'ts', query: {compilerOptions: {noEmit: false}}},
       {test: /\.css$/, loader: 'style-loader!css-loader' },
+      {test: /\.scss$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']},
       {
         test: /\.json$/,
         loader: 'json-loader'

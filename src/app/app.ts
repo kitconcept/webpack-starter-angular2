@@ -4,6 +4,7 @@ import { HomeComponent } from "./home";
 import { AboutComponent } from "./about";
 import { BackendComponent } from "./backend";
 import { NavbarComponent } from "./navbar";
+import "./styles.scss";
 
 @Component({
   selector: "kc-app",

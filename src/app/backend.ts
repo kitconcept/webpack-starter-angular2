@@ -36,7 +36,7 @@ export class BackendComponent implements OnInit {
           this.pageId = data.id;
           this.pageDescription = data.description;
           this.pageText = data.text.data;
-         },
+        },
         err => console.log("Can't get page. Error code: %s, URL: %s ",
                   err.status, err.url),
         () => console.log("Done")

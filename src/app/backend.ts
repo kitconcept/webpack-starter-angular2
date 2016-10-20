@@ -26,11 +26,6 @@ export class BackendComponent implements OnInit {
     console.log(this.location.path());
   }
 
-  ngOnDestroy(){
-    console.log("destroy");
-    this.sub.unsubscribe();
-  }
-
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
       this.activePath = params["path"];

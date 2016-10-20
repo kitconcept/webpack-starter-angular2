@@ -8,6 +8,7 @@ import { AboutComponent } from "./app/about";
 import { BackendComponent } from "./app/backend";
 import { NavbarComponent }  from "./app/navbar";
 import "material-design-lite/material.css";
+import "material-design-lite/material.js";
 
 @NgModule({
   imports: [

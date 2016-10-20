@@ -5,7 +5,7 @@ import { Page } from "./page";
 import { Location } from "@angular/common";
 
 @Component({
-  selector: "kc-backend",
+  selector: "plone-backend",
   template: `
     <h2>{{pageTitle}}</h2>
     <b>{{pageDescription}}</b>

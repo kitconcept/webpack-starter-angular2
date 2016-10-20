@@ -7,7 +7,7 @@ import { NavbarComponent } from "./navbar";
 import "./styles.scss";
 
 @Component({
-  selector: "kc-app",
+  selector: "plone-app",
   template: `
     <plone-navbar></plone-navbar>
     <div>

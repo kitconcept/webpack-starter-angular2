@@ -6,9 +6,9 @@ import { AboutComponent } from "./app/about";
 import { BackendComponent } from "./app/backend";
 
 const routes: Routes = [
-  { path: "",      component: HomeComponent},
+  { path: "", component: HomeComponent},
   { path: "about", component: AboutComponent},
-  { path: "backend", component: BackendComponent}
+  { path: ":path", component: BackendComponent}
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

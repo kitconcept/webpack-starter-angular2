@@ -17,7 +17,7 @@ export class BackendService {
     let headers = new Headers({ "Accept": "application/json" });
     let options = new RequestOptions({ headers: headers });
     return this.http.get(
-      "http://localhost:8080/Plone/front-page",
+      "http://localhost:8080/Plone/" + path,
       options
     ).map(response => response.json());
   }

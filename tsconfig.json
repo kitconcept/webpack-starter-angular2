@@ -1,17 +1,17 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "module": "commonjs",
     "sourceMap": true,
-    "noEmit": true,
     "target": "es5",
-    "types": ["es6-shim", "jasmine"]
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "exclude": [
-    "node_modules",
-    "node_modules/@types",
-    "typings"
+    "node_modules"
   ]
 }

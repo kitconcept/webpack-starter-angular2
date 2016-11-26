@@ -3,6 +3,27 @@ const webpack = require('webpack');
 const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+var entry = {
+    main: ['./src/main.ts']
+};
+
+let styles = [
+  './node_modules/material-design-lite/material.css'
+]
+let scripts = [
+]
+
+styles = styles.map(function (style) { return path.resolve(style); })
+scripts = scripts.map(function (script) { return path.resolve(script); })
+
+// Only add styles/scripts if there's actually entries there
+if (styles.length > 0) {
+    entry['styles'] = styles;
+}
+if (scripts.length > 0) {
+    entry['scripts'] = scripts;
+}
+
 module.exports = {
   debug: true,
   devServer: {
@@ -11,29 +32,39 @@ module.exports = {
     host: 'localhost',
     port: 3000
   },
-  entry: {
-    'main'  : './src/main.ts'
-  },
+  entry: entry,
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: '[name].bundle.js',
+    sourceMapFilename: '[name].map',
+
   },
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ['', '.ts', '.js', '.css'],
   },
   module: {
-    preLoaders: [
-        {
-            test: /\.ts$/,
-            loader: "tslint"
-        }
-    ],
+    // preLoaders: [
+    //     {
+    //         test: /\.ts$/,
+    //         loader: "tslint"
+    //     }
+    // ],
     loaders: [
       {test: /.ts$/, loader: 'ts', query: {compilerOptions: {noEmit: false}}},
       {
         test: /\.json$/,
         loader: 'json-loader'
-      }
+      },
+      {
+        exclude: styles,
+        test: /\.css$/,
+        loaders: ['raw-loader', 'css-loader']
+      },
+      {
+        include: styles,
+        test: /\.css$/,
+        loader: ['style-loader', 'css-loader']
+      },
     ],
     noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
   },

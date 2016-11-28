@@ -9,9 +9,10 @@ ${BROWSER}              firefox
 *** Settings ***
 
 Documentation   Webpack Starter Angular 2 Acceptance Tests
-Library         Process
 Library         DebugLibrary
+Library         OperatingSystem
 Library         Selenium2Library  timeout=10  implicit_wait=0
+Library         WebpackLibrary
 Suite Setup     Test Setup
 Suite Teardown  Test Teardown
 
@@ -19,16 +20,13 @@ Suite Teardown  Test Teardown
 *** Keywords ***
 
 Test Setup
-  ${webpack-dev-server}=  Start Process  webpack-dev-server --port 8080  cwd=${CURDIR}  shell=true
-  Set Suite Variable  ${WEBPACK-DEV-SERVER}  ${webpack-dev-server}
-  Sleep  5s
+  Start Webpack  ${HOSTNAME}  ${PORT}  config=webpack.config.js  webpack_bin_path=node_modules/webpack-dev-server/bin/webpack-dev-server.js  content_base=src  debug=True
   Open Browser  ${SERVER}  ${BROWSER}
   Set Window Size  1280  1024
 
 Test Teardown
+  Stop Webpack
   Close Browser
-  Log  ${WEBPACK-DEV-SERVER}
-  Terminate Process  ${WEBPACK-DEV-SERVER}
 
 
 *** Test Cases ***

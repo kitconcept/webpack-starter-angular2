@@ -21,7 +21,7 @@ Suite Teardown  Test Teardown
 Test Setup
   ${webpack-dev-server}=  Start Process  node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8080  cwd=${CURDIR}  shell=true
   Set Suite Variable  ${WEBPACK-DEV-SERVER}  ${webpack-dev-server}
-  Sleep  5s
+  Sleep  15s
   Open Browser  ${SERVER}  ${BROWSER}
   Set Window Size  1280  1024
 

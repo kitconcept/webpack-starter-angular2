@@ -31,10 +31,6 @@ module.exports = {
     // ],
     loaders: [
       {test: /.ts$/, loader: 'ts-loader', query: {compilerOptions: {noEmit: false}}},
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      }
     ],
     // noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
   },

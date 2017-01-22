@@ -4,7 +4,6 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  // debug: true,
   devServer: {
     contentBase: 'src',
     historyApiFallback: true,
@@ -73,6 +72,9 @@ module.exports = {
   //   }
   // },
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      debug: true
+    }),
     /*
      * Plugin: HtmlWebpackPlugin
      * Description: Simplifies creation of HTML files to serve your webpack bundles.

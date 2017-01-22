@@ -22,12 +22,6 @@ module.exports = {
     modules: ['src', 'node_modules'],
   },
   module: {
-    // preLoaders: [
-    //     {
-    //         test: /\.ts$/,
-    //         loader: "tslint"
-    //     }
-    // ],
     loaders: [
       {test: /.ts$/, loader: 'ts-loader', query: {compilerOptions: {noEmit: false}}},
     ],

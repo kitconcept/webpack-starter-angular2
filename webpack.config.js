@@ -1,33 +1,41 @@
-const path = require('path');
-const webpack = require('webpack');
-const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const ContextReplacementPlugin = require("webpack/lib/ContextReplacementPlugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   devServer: {
-    contentBase: 'src',
+    contentBase: "src",
     historyApiFallback: true,
-    host: 'localhost',
+    host: "localhost",
     port: 3000
   },
   entry: {
-    'main'  : './src/main.ts'
+    main: "./src/root.js"
   },
   output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js'
+    path: path.join(__dirname, "dist"),
+    filename: "[name].bundle.js",
+    chunkFilename: "[name].bundle.js"
   },
   resolve: {
-    extensions: ['.ts', '.js', '.json'],
-    modules: ['src', 'node_modules'],
+    extensions: [".ts", ".js", ".json"],
+    modules: ["src", "node_modules"]
   },
   module: {
     loaders: [
-      {test: /.ts$/, loader: 'ts-loader', query: {compilerOptions: {noEmit: false}}},
-    ],
+      {
+        test: /.ts$/,
+        loader: "ts-loader",
+        query: { compilerOptions: { noEmit: false } }
+      }
+    ]
     // noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: "common" // Specify the common bundle's name.
+    }),
     new webpack.LoaderOptionsPlugin({
       debug: true,
       options: {
@@ -35,9 +43,9 @@ module.exports = {
         tslint: {
           emitErrors: false,
           failOnHint: false,
-          resourcePath: 'src',
-          configuration: require('./tslint.json')
-        },
+          resourcePath: "src",
+          configuration: require("./tslint.json")
+        }
       }
     }),
     /*
@@ -49,9 +57,9 @@ module.exports = {
      * See: https://github.com/ampedandwired/html-webpack-plugin
      */
     new HtmlWebpackPlugin({
-      template: 'src/index.html',
-      chunksSortMode: 'dependency'
-    }),
+      template: "src/index.html",
+      chunksSortMode: "dependency"
+    })
     /**
      * Plugin: ContextReplacementPlugin
      * Description: Provides context to Angular's use of System.import
@@ -59,15 +67,15 @@ module.exports = {
      * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
      * See: https://github.com/angular/angular/issues/11580
      */
-    new ContextReplacementPlugin(
-      // The (\\|\/) piece accounts for path separators in *nix and Windows
-      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-      path.resolve(__dirname, 'src')
-    ),
+    // new ContextReplacementPlugin(
+    //   // The (\\|\/) piece accounts for path separators in *nix and Windows
+    //   /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+    //   path.resolve(__dirname, "src")
+    // )
   ],
   devServer: {
-    contentBase: 'src',
+    contentBase: "src",
     historyApiFallback: true
   },
-  devtool: 'source-map'
+  devtool: "source-map"
 };

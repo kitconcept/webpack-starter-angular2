@@ -11,12 +11,11 @@ module.exports = {
     port: 3000
   },
   entry: {
-    main: "./src/root.js"
+    main: "./src/main.ts"
   },
   output: {
     path: path.join(__dirname, "dist"),
-    filename: "[name].bundle.js",
-    chunkFilename: "[name].bundle.js"
+    filename: "bundle.js"
   },
   resolve: {
     extensions: [".ts", ".js", ".json"],
@@ -33,9 +32,6 @@ module.exports = {
     // noParse: [path.join(__dirname, 'node_modules', 'angular2', 'bundles')]
   },
   plugins: [
-    new webpack.optimize.CommonsChunkPlugin({
-      name: "common" // Specify the common bundle's name.
-    }),
     new webpack.LoaderOptionsPlugin({
       debug: true,
       options: {
@@ -58,8 +54,9 @@ module.exports = {
      */
     new HtmlWebpackPlugin({
       template: "src/index.html",
-      chunksSortMode: "dependency"
-    })
+      chunksSortMode: "dependency",
+      inject: false
+    }),
     /**
      * Plugin: ContextReplacementPlugin
      * Description: Provides context to Angular's use of System.import
@@ -67,15 +64,11 @@ module.exports = {
      * See: https://webpack.github.io/docs/list-of-plugins.html#contextreplacementplugin
      * See: https://github.com/angular/angular/issues/11580
      */
-    // new ContextReplacementPlugin(
-    //   // The (\\|\/) piece accounts for path separators in *nix and Windows
-    //   /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
-    //   path.resolve(__dirname, "src")
-    // )
+    new ContextReplacementPlugin(
+      // The (\\|\/) piece accounts for path separators in *nix and Windows
+      /angular(\\|\/)core(\\|\/)(esm(\\|\/)src|src)(\\|\/)linker/,
+      path.resolve(__dirname, "src")
+    )
   ],
-  devServer: {
-    contentBase: "src",
-    historyApiFallback: true
-  },
   devtool: "source-map"
 };

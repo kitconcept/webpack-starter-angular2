@@ -22,11 +22,11 @@ function component() {
   // Note that because a network request is involved, some indication
   // of loading would need to be shown in a production-level site/app.
   button.onclick = e =>
-    import(/* webpackChunkName: "main" */ "./main").then(module => {
-      var main = module.default;
-
-      main();
-    });
+    import(/* webpackChunkName: "main" */ /* webpackMode: "lazy" */ "./main").then(
+      module => {
+        console.log("angular app loaded");
+      }
+    );
 
   return element;
 }
